@@ -4,3 +4,6 @@
 <%= @blogger.bio %><br>
 <%= @blogger.age %><br>
 <%= @blogger.posts.map(&:likes).sum %>
+
+
+<%= button_to "Most Popular", post_path(@post), method: :get %>

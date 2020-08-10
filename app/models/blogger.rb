@@ -4,4 +4,11 @@ class Blogger < ApplicationRecord
  validates :name, uniqueness: true
  validates :age, numericality: {greater_than: 0}
  validates :bio, length: {minimum: 30}
+
+
+    def sort
+        self.posts.sort_by do |post|
+            post.likes
+        end
+    end
 end
