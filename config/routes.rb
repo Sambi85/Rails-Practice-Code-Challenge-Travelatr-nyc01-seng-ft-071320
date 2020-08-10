@@ -1,19 +1,21 @@
 Rails.application.routes.draw do
-  get 'posts/show'
+  resources :posts
+  resources :destinations
+  # get 'posts/show'
 
-  get 'posts/index'
+  # get 'posts/index'
 
-  get 'posts/new'
+  # get 'posts/new'
 
-  get 'posts/create'
+  # get 'posts/create'
 
-  get 'destinations/show'
+  # get 'destinations/show'
 
-  get 'destinations/index'
+  # get 'destinations/index'
 
-  get 'destinations/new'
+  # get 'destinations/new'
 
-  get 'destinations/create'
+  # get 'destinations/create'
 
   resources :bloggers
   # get 'blogger/index'
