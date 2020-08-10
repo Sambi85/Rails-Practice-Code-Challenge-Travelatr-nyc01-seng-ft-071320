@@ -1,0 +1,6 @@
+<h1>Profile</h1>
+
+<%= @blogger.name %><br>
+<%= @blogger.bio %><br>
+<%= @blogger.age %><br>
+<%= @blogger.posts.map(&:likes).sum %>

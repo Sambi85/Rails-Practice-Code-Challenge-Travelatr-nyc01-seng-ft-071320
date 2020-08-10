@@ -1,4 +1,4 @@
-class BloggerController < ApplicationController
+class BloggersController < ApplicationController
   
   def index
     @bloggers = Blogger.all
