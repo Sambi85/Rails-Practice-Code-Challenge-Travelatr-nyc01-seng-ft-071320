@@ -1,2 +1,20 @@
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
+
+<label>Title:</label><br>
+<%= @post.title %><br><br>
+
+<label>Content:</label><br>
+<%= @post.content%><br><br>
+
+<label>Likes:</label><br>
+<%= @post.likes %><br><br>
+
+<label>Blogger:</label><br>
+ <%= link_to @post.blogger.name, bloggers_path(@post.blogger_id)%><br><br>
+
+<label>Destination:</label><br>
+<%= link_to @post.destination.name, destinations_path(@post.destination_id)%><br><br>
+
+
+<%= button_to "Add +1 Like", post_path(@likes), method: :get %>

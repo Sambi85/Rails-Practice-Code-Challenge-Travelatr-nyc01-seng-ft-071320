@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = find_post
+    @likes = @post.add_like
   end
 
   def new
@@ -31,10 +32,12 @@ class PostsController < ApplicationController
 
   private
   
+  def find_post
+    @post = Post.find(params[:id])
+  end
+
   def new_post(*args)
     params.require(:post).permit(*args)
   end
-
-
 
 end

@@ -6,4 +6,4 @@
 <%= @blogger.posts.map(&:likes).sum %>
 
 
-<%= button_to "Most Popular", post_path(@post), method: :get %>
+<%= button_to "Most Popular", post_path(@best_blogger), method: :get %>

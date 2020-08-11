@@ -1,2 +1,14 @@
 <h1>Destinations#show</h1>
 <p>Find me in app/views/destinations/show.html.erb</p>
+
+
+<label>Name: </label>
+    <%=@destination.name%><br>
+
+<label>Country: </label>
+    <%=@destination.country%><br>
+
+<label>Average User Age:</label>
+    <%=@average_age%>
+
+<%= button_to "Most Popular", post_path(@best_destination), method: :get %>

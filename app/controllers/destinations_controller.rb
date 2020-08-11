@@ -1,10 +1,13 @@
 class DestinationsController < ApplicationController
-  def show
-    @destinations = Destination.all 
+  
+  def index
+    @destinations = Destination.all
   end
 
-  def index
+  def show
     @destination = find_destination
+    @average_age = @destination.avg_age
+    @best_destination = @destination.most_likes
   end
 
   def new
@@ -23,5 +26,7 @@ class DestinationsController < ApplicationController
   end
   
   def destination_params
-    params.require(:destination).permit(name: , country:)
+    params.require(:destination).permit(:name , :country)
+  end
 end
+

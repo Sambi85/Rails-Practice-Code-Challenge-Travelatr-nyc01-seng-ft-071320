@@ -5,7 +5,8 @@ class BloggersController < ApplicationController
   end
 
   def show
-      find_blogger
+      @blogger = find_blogger
+    @best_blogger = @blogger.most_likes
   end
 
   def new
